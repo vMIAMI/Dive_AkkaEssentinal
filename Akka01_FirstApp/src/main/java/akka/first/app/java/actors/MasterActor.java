@@ -25,6 +25,12 @@ public class MasterActor extends UntypedActor {
 				}
 			}), "map");
 
+	/**
+	 *  All messages passed should be immutable
+	 *
+	 *
+	 *
+	 */
 	@Override
 	public void onReceive(Object message) throws Exception {
 		if (message instanceof String) {
@@ -33,5 +39,8 @@ public class MasterActor extends UntypedActor {
 			aggregateActor.tell(message);
 		} else
 			unhandled(message);
+		//getContext().actorOf(new Props(MasterActor.class),"");
+
+		//getContext().become();
 	}
 }
