@@ -27,9 +27,6 @@ public class MasterActor extends UntypedActor {
 
 	/**
 	 *  All messages passed should be immutable
-	 *
-	 *
-	 *
 	 */
 	@Override
 	public void onReceive(Object message) throws Exception {
